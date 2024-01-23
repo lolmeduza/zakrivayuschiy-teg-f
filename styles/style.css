@@ -15,6 +15,215 @@
 */
 
 .page {
+  display: grid;
+  justify-items: center;
+  align-content: space-evenly;
+  background-color: var(--background-color);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  /* background-image: var(--background-image); */
+  /* background-image: linear-gradient(
+      0deg,
+      #d3d3d3 25%,
+      transparent 25%,
+      transparent 75%,
+      blue 75%,
+      red 100%
+    ),
+    linear-gradient(
+      90deg,
+      yellow 25%,
+      white 25%,
+      white 75%,
+      #fd0707 75%,
+      #5eff00 100%
+    ); */
+
+  /* background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      white,
+      transparent
+    ),
+    linear-gradient(to bottom, #e7e7e7 0 2px, transparent); */
+  /* background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3 2px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%); */
+  background-image: repeating-linear-gradient(to right, #d3d3d3, transparent),
+    repeating-linear-gradient(to bottom, #e7e7e7 2px, transparent);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--font-inter), "sans-serif";
+  font-variation-settings: "wdth" var(--font-weight-light-normal);
 }
+
+.page_text_weight_main {
+  font-size: 18px;
+}
+
+.zero-sprint-section {
+  padding-top: 7px;
+  padding-left: 11px;
+  height: 31px;
+  width: 100%;
+}
+
+.card-width {
+  width: 48.5vw;
+}
+.text-about-start {
+  width: 92%;
+  margin-left: 26px;
+  margin-top: 8px;
+}
+.header {
+  color: var(--text-color);
+  display: grid;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: var(--background-color);
+  min-height: 368px;
+  min-width: 375px;
+  border: 2px solid var(--border-color);
+  justify-items: center;
+  font-family: var(--font-start), "sans-serif";
+  align-content: space-evenly;
+}
+
+.header-nav-html {
+  margin-top: 110px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.page-subheader {
+  font-family: var(--font-start), "sans-serif";
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.theme-menu__list {
+  margin-left: 20px;
+  font-size: 14px;
+  font-family: var(--font-start), "sans-serif";
+  display: grid;
+  gap: 11px;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  text-transform: uppercase;
+  border: none;
+}
+
+.section_about_progress {
+  margin-bottom: 10px;
+  justify-items: end;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  outline: 2px solid var(--border-color);
+  display: grid;
+}
+
+.page-little-label {
+  font-family: var(--font-start), "sans-serif";
+  position: absolute;
+  mix-blend-mode: hard-light;
+  font-size: 14px;
+  opacity: 0.5;
+  top: 18px;
+  right: 25px;
+}
+@supports (
+  (text-stroke: 1px var(--background-color)) or
+    (-webkit-text-stroke: 1px var(--background-color))
+) {
+  .page-little-label {
+    -webkit-text-stroke-color: var(--background-color);
+    -webkit-text-stroke-width: 1px;
+  }
+}
+
+.page-html-position {
+  width: 100%;
+  position: relative;
+}
+
+.buttons {
+  justify-content: flex-end;
+  margin-right: 31px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.section-position-text {
+  height: 207px;
+}
+.car {
+  width: 100%;
+  height: 696px;
+  object-fit: cover;
+}
+.card__like-button {
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  font-family: var(--font-start), "sans-serif";
+  font-size: 14px;
+  background-color: transparent;
+  min-height: 38px;
+  min-width: 130px;
+}
+
+.card__icon-button {
+  margin-top: 7px;
+  background-color: transparent;
+  border: none;
+}
+.theme-menu__list {
+  position: relative;
+}
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  pointer-events: none;
+  left: -14px;
+}
+
+.theme-menu__button:disabled {
+  animation: moving 0.5s infinite ease-in-out alternate;
+}
+/*
+@keyframes moving {
+  from {
+    translate: 0 0;
+  }
+
+  to {
+    translate: 4px 0px;
+  }
+}
+.theme-menu__button:disabled {
+  animation: opacity 0.3s ease forwards;
+} */
+
+/* .theme-menu__button:hover {
+  animation: opacity 0.3s ease forwards;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+} */
