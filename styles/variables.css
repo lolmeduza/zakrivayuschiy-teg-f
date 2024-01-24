@@ -9,6 +9,13 @@
   --font-weight-dark-normal: 465px;
   --font-weight-dark-bold: 785px;
   --background-color: #fff;
-  --background-image: 
-;
+  /* --background-image: ; */
+  --heart-sparks-color: red;
+  --heart-main-color: red;
+  --core-color: #fff;
+  --like-text-button: black;
+  --heart-contour: #000;
+  --like-hover-color: black;
+  --like-main-color: black;
+  --main-color: white;
 }

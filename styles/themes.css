@@ -8,18 +8,39 @@
   --background-color: #000;
   --border-color: #00cc14;
   --text-color: #00cc14;
+  --like-text-button: #00cc14;
+  --heart-contour: #00cc14;
+  --heart-main-color: red;
+  --heart-sparks-color: red;
+  --core-color: #000;
+  --like-hover-color: #00cc14;
+  --like-main-color: #00cc14;
 }
 :root.theme-light {
   --border-color: #000;
   --background-color: #fff;
   --background-image: ;
+  --text-color: #000;
+  --like-text-button: black;
+  --heart-contour: #000;
+  --heart-main-color: red;
+  --heart-sparks-color: red;
+  --core-color: #fff;
+  --like-hover-color: black;
+  --like-main-color: black;
+  --main-color: white;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: #00cc14;
     --border-color: #00cc14;
     --background-color: #fff;
-    --background-image: 
-  ;
+    --heart-contour: #00cc14;
+    --like-text-button: #00cc14;
+    --heart-main-color: red;
+    --heart-sparks-color: red;
+    --core-color: #000;
+    --like-hover-color: #00cc14;
+    --like-main-color: #00cc14;
   }
 }
