@@ -18,4 +18,6 @@
   --like-hover-color: black;
   --like-main-color: black;
   --main-color: white;
+  --heart-contour-liked: red;
+  --diffence-color-like: #fff;
 }

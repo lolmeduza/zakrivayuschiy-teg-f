@@ -15,6 +15,9 @@
   --core-color: #000;
   --like-hover-color: #00cc14;
   --like-main-color: #00cc14;
+  --main-color: #000;
+  --heart-contour-liked: red;
+  --diffence-color-like: #00cc14;
 }
 :root.theme-light {
   --border-color: #000;
@@ -29,6 +32,8 @@
   --like-hover-color: black;
   --like-main-color: black;
   --main-color: white;
+  --diffence-color-like: #fff;
+  --heart-contour-liked: red;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -42,5 +47,8 @@
     --core-color: #000;
     --like-hover-color: #00cc14;
     --like-main-color: #00cc14;
+    --main-color: #000;
+    --heart-contour-liked: red;
+    --diffence-color-like: #00cc14;
   }
 }
