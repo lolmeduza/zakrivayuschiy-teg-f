@@ -21,15 +21,50 @@
   background-color: var(--background-color);
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-image: repeating-linear-gradient(to right, #d3d3d3, transparent),
-    repeating-linear-gradient(to bottom, #e7e7e7 2px, transparent);
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--background-image-color) 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--background-image-color) 0px 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--linear-gradient-from) 0.01%,
+      var(--linear-gradient-to) 100%
+    );
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: var(--font-inter), "sans-serif";
   font-variation-settings: "wdth" var(--font-weight-light-normal);
+  align-items: center;
 }
+/* .my-gradient {
+  width: 400px;
+  height: 400px;
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5) 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0px 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      to bottom,
+      #007f0c,
+      #004306 100%
+    )
+    ;
+} */
 
 .page_text_weight_main {
   font-size: 18px;
@@ -46,9 +81,10 @@
   width: 48.5vw;
 }
 .text-about-start {
-  width: 92%;
-  margin-left: 26px;
-  margin-top: 8px;
+  width: 97%;
+  margin-left: 27px;
+  margin-top: 5px;
+  margin-bottom: 26px;
 }
 .header {
   color: var(--text-color);
@@ -85,10 +121,12 @@
   font-family: var(--font-start), "sans-serif";
   display: grid;
   gap: 11px;
+  position: relative;
 }
 
 .section_about_progress {
   margin-bottom: 10px;
+  min-width: 375px;
   justify-items: end;
   background-color: var(--background-color);
   color: var(--text-color);
@@ -122,21 +160,19 @@
 
 .buttons {
   justify-content: flex-end;
-  margin-right: 31px;
+  margin-right: 26px;
   display: flex;
-  align-items: center;
-  gap: 5px;
+  align-items: flex-start;
+  margin-bottom: 21px;
 }
 
-.section-position-text {
-  height: 207px;
-}
 .car {
   width: 100%;
-  height: 696px;
+
   object-fit: cover;
 }
 .card__like-button {
+  cursor: pointer;
   color: var(--diffence-color-like);
   border: 2px solid var(--diffence-color-like);
   font-family: var(--font-start), "sans-serif";
@@ -149,13 +185,20 @@
 }
 
 .card__icon-button {
-  padding-top: 5px;
   background-color: transparent;
   border: none;
 }
-.theme-menu__list {
+
+.theme-menu__button {
+  background-color: transparent;
+  text-transform: uppercase;
+  border: none;
   position: relative;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
 }
+
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
@@ -175,15 +218,6 @@
   to {
     translate: 4px 0px;
   }
-}
-
-.theme-menu__button {
-  background-color: transparent;
-  text-transform: uppercase;
-  border: none;
-  position: relative;
-  text-decoration: none;
-  outline: none;
 }
 
 .theme-menu__button:hover {
@@ -225,7 +259,7 @@
 .card__like-button:focus-visible {
   text-decoration: none;
   outline: none;
-  box-shadow: 2px 2px 0px 0px var(--border-color);
+  box-shadow: 2px 2px 0px 0px var(--diffence-color-like);
   transition: 0.3s;
 }
 .hover_button_like {
@@ -239,7 +273,7 @@
   /* left: 0; */
   display: block;
   width: 0;
-  height: 36px;
+  height: 38px;
   /* background-color: var(--text-color); */
   background-color: var(--like-text-button);
   overflow: hidden;
@@ -258,9 +292,11 @@
 
 .card__icon-button:focus {
   outline: none;
+  border: none;
 }
 
 .card__icon-button:focus-visible {
+  border: none;
   text-decoration: none;
   outline: 2px solid var(--border-color);
   box-shadow: 2px 2px 0px 0px var(--border-color);
@@ -268,6 +304,12 @@
 }
 
 /* это блок с сердечком */
+
+.heart-button {
+  width: 40px;
+  height: 40px;
+}
+
 .like-icon {
   cursor: pointer;
 }
@@ -370,5 +412,57 @@
 } */
 
 /* это секция футер */
-.floppy {
+.footer_page_content {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_page_button {
+  background-color: var(--background-color);
+}
+
+#dialog-id {
+  width: 357px;
+  height: 193px;
+}
+.footer_button_floppy {
+  cursor: pointer;
+  color: var(--diffence-color-like);
+  border: 2px solid var(--diffence-color-like);
+  font-family: var(--font-start), "sans-serif";
+  font-size: 14px;
+  background-color: transparent;
+  min-height: 38px;
+  min-width: 130px;
+  position: relative;
+  mix-blend-mode: difference;
+}
+
+.footer_button_floppy:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.footer_button_floppy:focus-visible {
+  text-decoration: none;
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--diffence-color-like);
+  transition: 0.3s;
+}
+
+.footer_page_button::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 40px;
+  background-color: var(--like-text-button);
+  overflow: hidden;
+  z-index: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.footer_page_button:hover::before {
+  width: 22%;
+  transform: scale(1);
 }

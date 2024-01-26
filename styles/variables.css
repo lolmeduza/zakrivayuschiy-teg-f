@@ -20,4 +20,7 @@
   --main-color: white;
   --heart-contour-liked: red;
   --diffence-color-like: #fff;
+  --background-image-color: #d3d3d3;
+  --linear-gradient-from: #e7e7e7;
+  --linear-gradient-to: #1a1a1a;
 }
