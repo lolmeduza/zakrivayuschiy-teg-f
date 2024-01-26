@@ -23,4 +23,6 @@
   --background-image-color: #d3d3d3;
   --linear-gradient-from: #e7e7e7;
   --linear-gradient-to: #1a1a1a;
+  --animation-matrix-filter: brightness(109%) saturate(1.5);
+  --animation-matrix-mix: luminosity;
 }

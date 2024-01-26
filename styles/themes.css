@@ -21,6 +21,8 @@
   --diffence-color-like: #00cc14;
   --linear-gradient-from: #007f0c;
   --linear-gradient-to: #004306;
+  --animation-matrix-filter: brightness(170%) saturate(1.5);
+  --animation-matrix-mix: mix-blend-mode;
 }
 :root.theme-light {
   --border-color: #000;
@@ -40,6 +42,8 @@
   --background-image-color: #d3d3d3;
   --linear-gradient-from: #e7e7e7;
   --linear-gradient-to: #1a1a1a;
+  --animation-matrix-filter: brightness(109%) saturate(1.5);
+  --animation-matrix-mix: luminosity;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -59,5 +63,7 @@
     --background-image-color: #000;
     --linear-gradient-from: #007f0c;
     --linear-gradient-to: #004306;
+    --animation-matrix-filter: brightness(170%) saturate(1.5);
+    --animation-matrix-mix: mix-blend-mode;
   }
 }
