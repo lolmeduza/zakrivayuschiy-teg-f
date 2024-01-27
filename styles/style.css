@@ -85,12 +85,7 @@
 .card-width {
   width: 48.5vw;
 }
-.text-about-start {
-  width: 97%;
-  margin-left: 27px;
-  margin-top: 5px;
-  margin-bottom: 26px;
-}
+
 .header {
   color: var(--text-color);
   display: grid;
@@ -227,7 +222,8 @@
   position: relative;
 }
 
-.buttons {
+/* .buttons {
+
   justify-content: flex-end;
   margin-right: 25px;
   display: flex;
@@ -235,6 +231,27 @@
   margin-bottom: 24px;
   gap: 7px;
   margin-top: 29px;
+} */
+/* .text-about-start {
+  width: 97%;
+  margin-left: 27px;
+  margin-top: 5px;
+  margin-bottom: 26px;
+} */
+.text-about-start {
+  padding: 5px 6px 23px 25px;
+}
+.section-position-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  justify-content: flex-end;
+  display: flex;
+  margin-bottom: 20px;
+  gap: 7px;
+  margin-top: 53px;
 }
 
 .car {
