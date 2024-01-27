@@ -193,21 +193,21 @@
   /* mix-blend-mode: var(--tegridy-gig-mix); */
 }
 
-.section_tegridy_like::before {
+.tegridy_hover::before {
   position: absolute;
   content: "18+ content";
   font-size: 180px;
   transform: translateX(0%);
   display: block;
-  width: 48.5%;
-  height: 726px;
+  width: 100%;
+  height: 100%;
   /* background-color: var(--like-text-button); */
   overflow: hidden;
   z-index: 10;
   transition: 0.5s ease-in-out;
   background-color: rgb(240, 239, 239);
 }
-.section_tegridy_like:hover::before {
+.tegridy_hover:hover::before {
   transform: translateX(100%);
   opacity: 0;
 }
@@ -531,11 +531,6 @@
   transform: scale(1);
 }
 
-/* #dialog-id {
-  width: 357px;
-  height: 193px;
-} */
-
 dialog {
   font-family: var(--font-start), "sans-serif";
   font-size: 14px;
@@ -556,25 +551,26 @@ dialog:not([open]) {
   pointer-events: none;
   opacity: 0;
 }
-/* dialog::opened {
-  display: grid;
-} */
+
 dialog-id[opened] {
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
+
 .dialog-opnd {
   display: grid;
 }
+
 .text-dialog {
   margin-top: 40px;
   grid-row-start: 1;
   margin-left: 20px;
   grid-column-start: 2;
-
   grid-column-end: 4;
 }
+
 .dialog-button {
+  position: relative;
   grid-row-start: 2;
   grid-column-start: 1;
   grid-column-end: 4;
@@ -582,11 +578,47 @@ dialog-id[opened] {
   margin-left: 20px;
   width: 293px;
   height: 38px;
+  color: var(--diffence-color-like);
+  outline: 2px solid var(--diffence-color-like);
+  background-color: transparent;
+  mix-blend-mode: difference;
 }
+
 .floppy_big {
   margin-top: 35px;
   width: 40px;
   margin-left: 19px;
   height: 40px;
+  transform: scale(1);
+}
+
+.dialog-button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.dialog-button:focus-visible {
+  text-decoration: none;
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--diffence-color-like);
+  transition: 0.3s;
+}
+
+.dialog-button::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 37px;
+  background-color: var(--main-color);
+  overflow: hidden;
+  z-index: 0;
+  left: -1px;
+  bottom: -1px;
+  transition: 0.5s ease-in-out;
+}
+
+.dialog-button:hover::after {
+  width: 101%;
   transform: scale(1);
 }
