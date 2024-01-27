@@ -159,36 +159,37 @@
 }
 
 .matrix {
-  width: 696px;
+  width: 100%;
+  max-width: 100%;
   height: 696px;
   mix-blend-mode: var(--animation-matrix-mix);
   filter: var(--animation-matrix-filter);
 }
 
 .look_out_the_window {
-  width: 696px;
-  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
   height: 696px;
   filter: var(--look-gif-mix);
 }
 
 .defo-gif {
-  width: 696px;
-  object-fit: fill;
+  width: 100%;
+  max-width: 100%;
   height: 696px;
   filter: var(--defo-gif-filter);
 }
 
 .karman-bro {
-  width: 696px;
-  object-fit: fill;
+  width: 100%;
+  max-width: 100%;
   height: 696px;
 }
 
 .tegridy {
   position: relative;
-  width: 696px;
-  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
   height: 696px;
   filter: brightness(0.5);
 }
@@ -207,9 +208,18 @@
   transition: 0.5s ease-in-out;
   background-color: var(--linear-gradient-from);
 }
+
 .tegridy_hover:hover::before {
   transform: translateX(100%);
   opacity: 0;
+}
+
+.simspon {
+  position: relative;
+  width: 696px;
+  object-fit: cover;
+  height: 696px;
+  filter: brightness(0.5);
 }
 
 .page-html-position {
@@ -565,8 +575,11 @@ dialog-id[opened] {
 }
 
 .text-dialog {
-  margin-top: 40px;
+  margin-top: 24px;
+  margin-right: 20px;
+  line-height: 20.5px;
   grid-row-start: 1;
+  text-transform: uppercase;
   margin-left: 20px;
   grid-column-start: 2;
   grid-column-end: 4;
@@ -583,7 +596,7 @@ dialog-id[opened] {
   width: 293px;
   height: 38px;
   color: var(--diffence-color-like);
-  outline: 2px solid var(--diffence-color-like);
+  border: 2px solid var(--diffence-color-like);
   background-color: transparent;
   mix-blend-mode: difference;
 }
