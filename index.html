@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles/themes.css" />
     <link rel="icon" href="svg/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="images/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="images/image.ico" />
+    <link rel="apple-touch-icon" href="svg/favicon.svg" />
   </head>
   <body class="page">
     <header class="header card-width">
@@ -411,7 +411,7 @@
           </div>
         </div>
       </section>
-      <section class="section_about_progress card-width">
+      <section class="section_about_progress card-width section_tegridy_like">
         <h2 class="zero-sprint-section page_text_weight_main">
           Фритрек и нулевой спринт: Подготовка к работе
         </h2>
@@ -491,9 +491,10 @@
             type="button"
             class="footer_button_floppy"
             onclick="window['dialog-id'].showModal();"
+            onclick="window['dialog-id'].close();"
             aria-controls="dialog-id"
           >
-            <svg width="40px" height="40px">
+            <svg class="floppy_small">
               <use href="svg/floppy.svg#floppy" class="floppy"></use>
             </svg>
             <span class="button__text"> Сохранить на память</span>
@@ -502,12 +503,20 @@
       </footer>
     </main>
     <dialog id="dialog-id">
-      <form method="dialog">
-        Вставьте дискету, чтобы продолжить
-        <button type="submit">ок</button>
-        <svg width="40px" height="40px">
+      <form method="dialog " class="dialog-opnd">
+        <a class="text-dialog">Вставьте дискету, чтобы продолжить</a>
+
+        <svg class="floppy_big">
           <use href="svg/floppy.svg#floppy" class="floppy"></use>
         </svg>
+
+        <button
+          type="button"
+          class="dialog-button"
+          onclick="window['dialog-id'].close();"
+        >
+          ок
+        </button>
       </form>
     </dialog>
     <script src="./scripts/like.js"></script>

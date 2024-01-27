@@ -186,10 +186,30 @@
 }
 
 .tegridy {
+  position: relative;
   width: 696px;
   object-fit: cover;
   height: 696px;
-  mix-blend-mode: var(--tegridy-gig-mix);
+  /* mix-blend-mode: var(--tegridy-gig-mix); */
+}
+
+.section_tegridy_like::before {
+  position: absolute;
+  content: "18+ content";
+  font-size: 180px;
+  transform: translateX(0%);
+  display: block;
+  width: 48.5%;
+  height: 726px;
+  /* background-color: var(--like-text-button); */
+  overflow: hidden;
+  z-index: 10;
+  transition: 0.5s ease-in-out;
+  background-color: rgb(240, 239, 239);
+}
+.section_tegridy_like:hover::before {
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 .page-html-position {
@@ -310,12 +330,9 @@
 .hover_button_like::before {
   position: absolute;
   content: "";
-  /* bottom: 0; */
-  /* left: 0; */
   display: block;
   width: 0;
   height: 38px;
-  /* background-color: var(--text-color); */
   background-color: var(--like-text-button);
   overflow: hidden;
   z-index: 0;
@@ -465,7 +482,11 @@
 .floppy {
   fill: var(--core-color);
 }
-
+.floppy_small {
+  width: 40px;
+  height: 40px;
+  transform: scale(0.53);
+}
 .footer_button_floppy {
   cursor: pointer;
   color: var(--diffence-color-like);
@@ -477,6 +498,8 @@
   min-width: 130px;
   position: relative;
   mix-blend-mode: difference;
+  align-items: center;
+  display: flex;
 }
 
 .footer_button_floppy:focus {
@@ -496,7 +519,7 @@
   content: "";
   display: block;
   width: 0;
-  height: 40px;
+  height: 43px;
   background-color: var(--like-text-button);
   overflow: hidden;
   z-index: 0;
@@ -504,7 +527,7 @@
 }
 
 .footer_page_button:hover::before {
-  width: 22%;
+  width: 22.5%;
   transform: scale(1);
 }
 
@@ -514,11 +537,13 @@
 } */
 
 dialog {
-  display: grid;
+  font-family: var(--font-start), "sans-serif";
+  font-size: 14px;
+  display: flex;
   border-width: 0px;
   max-inline-size: 357px;
   inline-size: 98%;
-  min-inline-size: 193px;
+  min-height: 193px;
   position: fixed;
   inset: 0;
 }
@@ -530,4 +555,38 @@ dialog::backdrop {
 dialog:not([open]) {
   pointer-events: none;
   opacity: 0;
+}
+/* dialog::opened {
+  display: grid;
+} */
+dialog-id[opened] {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.dialog-opnd {
+  display: grid;
+}
+.text-dialog {
+  margin-top: 40px;
+  grid-row-start: 1;
+  margin-left: 20px;
+  grid-column-start: 2;
+
+  grid-column-end: 4;
+}
+.dialog-button {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 1px;
+  margin-left: 20px;
+  width: 293px;
+  height: 38px;
+}
+.floppy_big {
+  margin-top: 35px;
+  width: 40px;
+  margin-left: 19px;
+  height: 40px;
+  transform: scale(1);
 }
