@@ -25,4 +25,7 @@
   --linear-gradient-to: #1a1a1a;
   --animation-matrix-filter: brightness(109%) saturate(1.5);
   --animation-matrix-mix: luminosity;
+  --look-gif-mix: opacity(1.5);
+  --defo-gif-filter: blur(4px);
+  --tegridy-gig-mix: exclusion;
 }

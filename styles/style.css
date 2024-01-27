@@ -44,6 +44,11 @@
   font-variation-settings: "wdth" var(--font-weight-light-normal);
   align-items: center;
 }
+
+.page_main {
+  display: grid;
+  gap: 46px;
+}
 /* .my-gradient {
   width: 400px;
   height: 400px;
@@ -159,6 +164,34 @@
   mix-blend-mode: var(--animation-matrix-mix);
   filter: var(--animation-matrix-filter);
 }
+
+.look_out_the_window {
+  width: 696px;
+  object-fit: cover;
+  height: 696px;
+  filter: var(--look-gif-mix);
+}
+
+.defo-gif {
+  width: 696px;
+  object-fit: fill;
+  height: 696px;
+  filter: var(--defo-gif-filter);
+}
+
+.karman-bro {
+  width: 696px;
+  object-fit: fill;
+  height: 696px;
+}
+
+.tegridy {
+  width: 696px;
+  object-fit: cover;
+  height: 696px;
+  mix-blend-mode: var(--tegridy-gig-mix);
+}
+
 .page-html-position {
   width: 100%;
   position: relative;
@@ -166,10 +199,12 @@
 
 .buttons {
   justify-content: flex-end;
-  margin-right: 26px;
+  margin-right: 25px;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 21px;
+  margin-bottom: 24px;
+  gap: 7px;
+  margin-top: 29px;
 }
 
 .car {
@@ -192,6 +227,7 @@
 .card__icon-button {
   background-color: transparent;
   border: none;
+  display: contents;
 }
 
 .theme-menu__button {
@@ -426,6 +462,10 @@
   background-color: var(--background-color);
 }
 
+.floppy {
+  fill: var(--core-color);
+}
+
 .footer_button_floppy {
   cursor: pointer;
   color: var(--diffence-color-like);
@@ -484,9 +524,7 @@ dialog {
 }
 
 dialog::backdrop {
-  background-color: rgba(255, 0, 0, 0.6);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 dialog:not([open]) {

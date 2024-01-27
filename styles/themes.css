@@ -23,6 +23,9 @@
   --linear-gradient-to: #004306;
   --animation-matrix-filter: brightness(170%) saturate(1.5);
   --animation-matrix-mix: mix-blend-mode;
+  --look-gif-mix: opacity(0.5);
+  --defo-gif-filter: grayscale(1);
+  --tegridy-gig-mix: difference;
 }
 :root.theme-light {
   --border-color: #000;
@@ -44,6 +47,9 @@
   --linear-gradient-to: #1a1a1a;
   --animation-matrix-filter: brightness(109%) saturate(1.5);
   --animation-matrix-mix: luminosity;
+  --look-gif-mix: opacity(1.5);
+  --defo-gif-filter: blur(4px);
+  --tegridy-gig-mix: exclusion;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -65,5 +71,8 @@
     --linear-gradient-to: #004306;
     --animation-matrix-filter: brightness(170%) saturate(1.5);
     --animation-matrix-mix: mix-blend-mode;
+    --look-gif-mix: opacity(0.5);
+    --defo-gif-filter: grayscale(1);
+    --tegridy-gig-mix: difference;
   }
 }
