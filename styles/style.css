@@ -190,22 +190,22 @@
   width: 696px;
   object-fit: cover;
   height: 696px;
-  /* mix-blend-mode: var(--tegridy-gig-mix); */
+  filter: brightness(0.5);
 }
 
 .tegridy_hover::before {
   position: absolute;
   content: "18+ content";
+  color: black;
   font-size: 180px;
   transform: translateX(0%);
   display: block;
   width: 100%;
   height: 100%;
-  /* background-color: var(--like-text-button); */
   overflow: hidden;
   z-index: 10;
   transition: 0.5s ease-in-out;
-  background-color: rgb(240, 239, 239);
+  background-color: var(--linear-gradient-from);
 }
 .tegridy_hover:hover::before {
   transform: translateX(100%);
@@ -532,6 +532,9 @@
 }
 
 dialog {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  outline: 2px solid var(--border-color);
   font-family: var(--font-start), "sans-serif";
   font-size: 14px;
   display: flex;
@@ -570,6 +573,7 @@ dialog-id[opened] {
 }
 
 .dialog-button {
+  cursor: pointer;
   position: relative;
   grid-row-start: 2;
   grid-column-start: 1;
@@ -604,21 +608,22 @@ dialog-id[opened] {
   transition: 0.3s;
 }
 
-.dialog-button::after {
+.dialog-button::before {
   position: absolute;
   content: "";
   display: block;
   width: 0;
   height: 37px;
-  background-color: var(--main-color);
+  background-color: var(--diffence-color-like);
   overflow: hidden;
   z-index: 0;
   left: -1px;
   bottom: -1px;
   transition: 0.5s ease-in-out;
+  mix-blend-mode: difference;
 }
 
-.dialog-button:hover::after {
+.dialog-button:hover::before {
   width: 101%;
   transform: scale(1);
 }
