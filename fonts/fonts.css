@@ -7,7 +7,7 @@
     url("..zakrivayuschiy-teg-f/fonts/Inter-Variable.woff2")
       format("woff2 supports variations"),
     url("../fonts/Inter-Variable.woff2") format("woff2-variations");
-  font-weight: 400px;
+  font-weight: 400px 785px;
 }
 @font-face {
   font-display: swap;
@@ -17,15 +17,5 @@
     url("..zakrivayuschiy-teg-f/fonts/PressStart2P-Regular.woff")
       format("woff supports variations"),
     url("../fonts/PressStart2P-Regular.woff") format("woff-variations");
-  font-weight: 400px;
-}
-@font-face {
-  font-display: swap;
-  font-family: "inter-Variable";
-  src:
-    local("Inter-Variable.woff2"),
-    url("..zakrivayuschiy-teg-f/fonts/Inter-Variable.woff2")
-      format("woff2 supports variations"),
-    url("../fonts/Inter-Variable.woff2") format("woff2-variations");
-  font-weight: 785px;
+  font-weight: 400px 785px;
 }
