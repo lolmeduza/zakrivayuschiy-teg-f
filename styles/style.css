@@ -510,7 +510,7 @@
   transform: scale(1);
 }
 
-dialog {
+dialog[open] {
   background-color: var(--background-color);
   color: var(--text-color);
   outline: 2px solid;
@@ -533,11 +533,6 @@ dialog::backdrop {
 dialog:not([open]) {
   pointer-events: none;
   opacity: 0;
-}
-
-dialog-id[opened] {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
 }
 
 .dialog-opnd {
