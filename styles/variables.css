@@ -28,4 +28,5 @@
   --look-gif-mix: opacity(1.5);
   --defo-gif-filter: blur(4px);
   --tegridy-gig-mix: exclusion;
+  --simpson-mix: luminosity;
 }

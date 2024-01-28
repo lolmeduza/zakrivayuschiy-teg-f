@@ -1,19 +1,3 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-
-*/
-
 .page {
   display: grid;
   justify-items: center;
@@ -49,27 +33,6 @@
   display: grid;
   gap: 46px;
 }
-/* .my-gradient {
-  width: 400px;
-  height: 400px;
-  background-image:
-    repeating-linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.5) 0px 2px,
-      transparent 2px 4px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.5) 0px 2px,
-      transparent 2px 4px
-    ),
-    linear-gradient(
-      to bottom,
-      #007f0c,
-      #004306 100%
-    )
-    ;
-} */
 
 .page_text_weight_main {
   font-size: 18px;
@@ -110,15 +73,17 @@
 }
 
 .page-subheader {
-  font-family: var(--font-start), "sans-serif";
-  font-size: 23px;
+  font:
+    23px var(--font-start),
+    "sans-serif";
   text-transform: uppercase;
 }
 
 .theme-menu__list {
   margin-left: 20px;
-  font-size: 14px;
-  font-family: var(--font-start), "sans-serif";
+  font:
+    14px var(--font-start),
+    "sans-serif";
   display: grid;
   gap: 11px;
   position: relative;
@@ -130,15 +95,16 @@
   justify-items: end;
   background-color: var(--background-color);
   color: var(--text-color);
-  outline: 2px solid var(--border-color);
+  outline: 2px solid;
   display: grid;
 }
 
 .page-little-label {
-  font-family: var(--font-start), "sans-serif";
+  font:
+    14px var(--font-start),
+    "sans-serif";
   position: absolute;
   mix-blend-mode: hard-light;
-  font-size: 14px;
   opacity: 0.5;
   top: 18px;
   right: 25px;
@@ -180,7 +146,6 @@
   max-width: 100%;
   height: 696px;
 }
-
 .tegridy {
   position: relative;
   width: 100%;
@@ -190,6 +155,7 @@
 }
 
 .tegridy_hover::before {
+  cursor: pointer;
   position: absolute;
   content: "18+ content";
   color: black;
@@ -203,9 +169,81 @@
   transition: 0.5s ease-in-out;
   background-color: var(--linear-gradient-from);
 }
-
+.tegridy_hover::after {
+  cursor: pointer;
+  position: absolute;
+  content: "seriously, it's not for kids";
+  color: black;
+  font-size: 180px;
+  transform: translateX(0%);
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 9;
+  top: 1px;
+  transition: 0.5s ease-in-out;
+  background-color: var(--linear-gradient-from);
+}
+.tegridy_hover:active::after {
+  transform: translateX(-100%);
+  opacity: 0;
+}
 .tegridy_hover:hover::before {
   transform: translateX(100%);
+  opacity: 0;
+}
+
+.Matthew_McConaughey {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 696px;
+  filter: brightness(0.7);
+}
+
+.McConaughey_hover::before {
+  position: absolute;
+  content: "";
+  color: black;
+  font-size: 180px;
+  transform: translateX(0%);
+  display: block;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  right: 1px;
+  z-index: 10;
+  transition: 0.5s ease-in-out;
+  background-color: var(--linear-gradient-from);
+}
+.McConaughey_hover:hover::before {
+  transform: matrix3d(1.5, 0, 0, 0, 0, 1.5, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1);
+  transform-origin: top;
+  opacity: 0;
+}
+
+.McConaughey_hover::after {
+  cursor: pointer;
+  position: absolute;
+  content: "";
+  color: black;
+  font-size: 180px;
+  left: 1px;
+  transform: translateX(0%);
+  display: block;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 9;
+  top: 1px;
+  transition: 0.5s ease-in-out;
+  background-color: var(--linear-gradient-from);
+}
+
+.McConaughey_hover:hover::after {
+  transform: matrix3d(1.5, 0, 0, 0, 0, 1.5, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1);
+  transform-origin: top;
   opacity: 0;
 }
 
@@ -214,7 +252,8 @@
   width: 696px;
   object-fit: cover;
   height: 696px;
-  filter: brightness(0.5);
+  filter: brightness(0.8);
+  mix-blend-mode: var(--simpson-mix);
 }
 
 .page-html-position {
@@ -222,53 +261,43 @@
   position: relative;
 }
 
-/* .buttons {
-
-  justify-content: flex-end;
-  margin-right: 25px;
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 24px;
-  gap: 7px;
-  margin-top: 29px;
-} */
-/* .text-about-start {
-  width: 97%;
-  margin-left: 27px;
-  margin-top: 5px;
-  margin-bottom: 26px;
-} */
 .text-about-start {
-  padding: 5px 6px 23px 25px;
+  padding: 27px 25px 0px 25px;
 }
+
 .section-position-text {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
 }
 
 .buttons {
   justify-content: flex-end;
   display: flex;
-  margin-bottom: 20px;
   gap: 7px;
-  margin-top: 53px;
+  padding: 43px 26px 22px;
 }
 
 .car {
   width: 100%;
   object-fit: cover;
 }
+
 .card__like-button {
   cursor: pointer;
   color: var(--diffence-color-like);
   border: 2px solid var(--diffence-color-like);
-  font-family: var(--font-start), "sans-serif";
-  font-size: 14px;
+  font:
+    14px var(--font-start),
+    "sans-serif";
   background-color: transparent;
   min-height: 38px;
   min-width: 130px;
   position: relative;
   mix-blend-mode: difference;
+}
+
+.text-about-memories {
+  padding: 10px 6px 0px 25px;
 }
 
 .card__icon-button {
@@ -283,7 +312,7 @@
   border: none;
   position: relative;
   text-decoration: none;
-  outline: none;
+  outline: 0;
   cursor: pointer;
 }
 
@@ -297,12 +326,10 @@
 .theme-menu__button::before {
   animation: moving 0.5s infinite ease-in-out alternate;
 }
-
 @keyframes moving {
   from {
     translate: 0 0;
   }
-
   to {
     translate: 4px 0px;
   }
@@ -311,7 +338,6 @@
 .theme-menu__button:hover {
   animation: opacity 0.3s ease forwards;
 }
-
 @keyframes opacity {
   from {
     opacity: 1;
@@ -331,25 +357,28 @@
   background: var(--text-color);
   transition: 0.3s;
 }
+
 .theme-menu__button:focus::after {
   text-decoration: none;
-  outline: none;
+  outline: 0;
 }
+
 .theme-menu__button:focus-visible::after {
   width: 100%;
 }
 
 .card__like-button:focus {
   text-decoration: none;
-  outline: none;
+  outline: 0;
 }
 
 .card__like-button:focus-visible {
   text-decoration: none;
-  outline: none;
+  outline: 0;
   box-shadow: 2px 2px 0px 0px var(--diffence-color-like);
   transition: 0.3s;
 }
+
 .hover_button_like {
   position: relative;
 }
@@ -369,26 +398,24 @@
 .button__text {
   z-index: 10;
 }
+
 .hover_button_like:hover::before {
   width: 100%;
   transform: scale(1);
-  /* color: green; */
 }
 
 .card__icon-button:focus {
-  outline: none;
+  outline: 0;
   border: none;
 }
 
 .card__icon-button:focus-visible {
   border: none;
   text-decoration: none;
-  outline: 2px solid var(--border-color);
+  outline: 2px solid;
   box-shadow: 2px 2px 0px 0px var(--border-color);
   transition: 0.3s;
 }
-
-/* это блок с сердечком */
 
 .heart-button {
   width: 40px;
@@ -398,6 +425,7 @@
 .like-icon {
   cursor: pointer;
 }
+
 .sparks {
   opacity: 0;
 }
@@ -427,27 +455,23 @@
   --core-color: var(--heart-main-color);
   --main-color: var(--heart-main-color);
   --heart-contour: var(--heart-contour-liked);
+  animation: scale 0.3s ease-in;
+  animation-delay: 0.1s;
 }
 
 .like-icon.is-liked .contour {
   transition: 0.3s linear;
   transition-delay: 0.03s;
 }
-
-.like-icon.is-liked {
-  animation: scale 0.3s ease-in;
-  animation-delay: 0.1s;
-}
-
 @keyframes scale {
   from {
     scale: 1;
   }
-
   to {
     scale: 1.5;
   }
 }
+
 .like-icon.is-liked .sparks {
   animation: opacity 0.3s ease-in;
   animation-delay: 0.3s;
@@ -456,47 +480,11 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
 
-/* это блок с анимацией сердца( старый) */
-
-/*
-.core {
-  transition: 0.3s ease;
-  transition-delay: 0.03s;
-}
-
-.card__icon-button:hover {
-  --core-color: var(--like-hover-color);
-  opacity: 1;
-}
-.main-body {
-  transition: 0.3s ease;
-}
-.main-body:hover {
-  --main-color: var(--like-hover-color);
-  opacity: 1;
-  transition: 0.3s ease;
-  transition-delay: 0.05s;
-}
-
-.main-body:active {
-  --main-color: var(--heart-main-color);
-  opacity: 1;
-  transition: 0.3s ease;
-  transition-delay: 0.05s;
-}
-.core:active {
-  --core-color: var(--heart-main-color);
-  transition: 0.3s ease;
-  transition-delay: 0.03s;
-} */
-
-/* это секция футер */
 .footer_page_content {
   display: flex;
   justify-content: center;
@@ -509,17 +497,20 @@
 .floppy {
   fill: var(--core-color);
 }
+
 .floppy_small {
   width: 40px;
   height: 40px;
   transform: scale(0.53);
 }
+
 .footer_button_floppy {
   cursor: pointer;
   color: var(--diffence-color-like);
   border: 2px solid var(--diffence-color-like);
-  font-family: var(--font-start), "sans-serif";
-  font-size: 14px;
+  font:
+    14px var(--font-start),
+    "sans-serif";
   background-color: transparent;
   min-height: 38px;
   min-width: 130px;
@@ -531,12 +522,12 @@
 
 .footer_button_floppy:focus {
   text-decoration: none;
-  outline: none;
+  outline: 0;
 }
 
 .footer_button_floppy:focus-visible {
   text-decoration: none;
-  outline: none;
+  outline: 0;
   box-shadow: 2px 2px 0px 0px var(--diffence-color-like);
   transition: 0.3s;
 }
@@ -557,31 +548,28 @@
   width: 22.5%;
   transform: scale(1);
 }
-
 dialog {
   background-color: var(--background-color);
   color: var(--text-color);
-  outline: 2px solid var(--border-color);
-  font-family: var(--font-start), "sans-serif";
-  font-size: 14px;
+  outline: 2px solid;
+  font:
+    14px var(--font-start),
+    "sans-serif";
   display: flex;
-  border-width: 0px;
+  border-width: 0;
   max-inline-size: 357px;
   inline-size: 98%;
   min-height: 193px;
   position: fixed;
   inset: 0;
 }
-
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
-
 dialog:not([open]) {
   pointer-events: none;
   opacity: 0;
 }
-
 dialog-id[opened] {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -628,12 +616,12 @@ dialog-id[opened] {
 
 .dialog-button:focus {
   text-decoration: none;
-  outline: none;
+  outline: 0;
 }
 
 .dialog-button:focus-visible {
   text-decoration: none;
-  outline: none;
+  outline: 0;
   box-shadow: 2px 2px 0px 0px var(--diffence-color-like);
   transition: 0.3s;
 }

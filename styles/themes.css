@@ -26,6 +26,7 @@
   --look-gif-mix: opacity(0.5);
   --defo-gif-filter: grayscale(1);
   --tegridy-gig-mix: difference;
+  --simpson-mix: lighten;
 }
 :root.theme-light {
   --border-color: #000;
@@ -50,6 +51,7 @@
   --look-gif-mix: opacity(1.5);
   --defo-gif-filter: blur(4px);
   --tegridy-gig-mix: exclusion;
+  --simpson-mix: luminosity;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -74,5 +76,6 @@
     --look-gif-mix: opacity(0.5);
     --defo-gif-filter: grayscale(1);
     --tegridy-gig-mix: difference;
+    --simpson-mix: lighten;
   }
 }
