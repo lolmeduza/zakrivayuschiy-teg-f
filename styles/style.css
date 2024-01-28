@@ -535,9 +535,9 @@ dialog:not([open]) {
   opacity: 0;
 }
 
-.dialog-opnd {
+/* .dialog-opnd {
   display: grid;
-}
+} */
 
 .text-dialog {
   margin-top: 24px;
