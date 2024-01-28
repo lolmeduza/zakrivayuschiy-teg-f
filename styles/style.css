@@ -510,7 +510,7 @@
   transform: scale(1);
 }
 
-dialog[open] {
+dialog[opened] {
   background-color: var(--background-color);
   color: var(--text-color);
   outline: 2px solid;
