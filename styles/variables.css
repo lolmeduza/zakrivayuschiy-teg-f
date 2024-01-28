@@ -4,10 +4,8 @@
   --font-start: "PressStart2P-Regular";
   --text-color: #000;
   --border-color: #000;
-  --font-weight-light-normal: 400px;
-  --font-weight-light-bold: 700px;
-  --font-weight-dark-normal: 465px;
-  --font-weight-dark-bold: 785px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
   --background-color: #fff;
   /* --background-image: ; */
   --heart-sparks-color: red;

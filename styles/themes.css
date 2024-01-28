@@ -27,6 +27,8 @@
   --defo-gif-filter: grayscale(1);
   --tegridy-gig-mix: difference;
   --simpson-mix: lighten;
+  --font-weight-normal: 465;
+  --font-weight-bold: 785;
 }
 :root.theme-light {
   --border-color: #000;
@@ -52,6 +54,8 @@
   --defo-gif-filter: blur(4px);
   --tegridy-gig-mix: exclusion;
   --simpson-mix: luminosity;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -77,5 +81,7 @@
     --defo-gif-filter: grayscale(1);
     --tegridy-gig-mix: difference;
     --simpson-mix: lighten;
+    --font-weight-normal: 465;
+    --font-weight-bold: 785;
   }
 }

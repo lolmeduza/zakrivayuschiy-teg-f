@@ -25,7 +25,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   font-family: var(--font-inter), "sans-serif";
-  font-variation-settings: "wgth" var(--font-weight-light-normal);
+  font-variation-settings: "wght" var(--font-weight-normal);
   align-items: center;
 }
 
@@ -43,6 +43,7 @@
   padding-left: 11px;
   height: 31px;
   width: 100%;
+  font-variation-settings: "wght" var(--font-weight-bold);
 }
 
 .card-width {
@@ -161,7 +162,7 @@
   position: absolute;
   content: "18+ content";
   color: black;
-  font-size: 180px;
+  font-size: clamp(2.5rem, -0.581rem + 13.1455vw, 11.25rem);
   transform: translateX(0%);
   display: block;
   width: 100%;
@@ -171,12 +172,13 @@
   transition: 0.5s ease-in-out;
   background-color: var(--linear-gradient-from);
 }
+
 .tegridy_hover::after {
   cursor: pointer;
   position: absolute;
   content: "seriously, it's not for kids";
   color: black;
-  font-size: 180px;
+  font-size: clamp(2.5rem, -0.581rem + 13.1455vw, 11.25rem);
   transform: translateX(0%);
   display: block;
   width: 100%;
@@ -187,10 +189,12 @@
   transition: 0.5s ease-in-out;
   background-color: var(--linear-gradient-from);
 }
+
 .tegridy_hover:active::after {
   transform: translateX(-100%);
   opacity: 0;
 }
+
 .tegridy_hover:hover::before {
   transform: translateX(100%);
   opacity: 0;
