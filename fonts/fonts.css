@@ -10,11 +10,8 @@
 }
 
 @font-face {
-  font-display: swap;
   font-family: "PressStart2P-Regular";
-  src:
-    local("PressStart2P-Regular.woff"),
-    url("../fonts/PressStart2P-Regular.woff") format("woff supports variations"),
-    url("../fonts/PressStart2P-Regular.woff") format("woff-variations");
-  font-weight: 400px;
+  src: url("../fonts/PressStart2P-Regular.woff") format("woff");
+  font-weight: bold;
+  font-display: swap;
 }

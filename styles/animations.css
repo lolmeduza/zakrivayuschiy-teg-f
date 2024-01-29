@@ -12,3 +12,42 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes moving {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 4px 0px;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+@keyframes scale {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.5;
+  }
+}
+@keyframes opacity-sraks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.theme-menu__button::before {
+  animation: moving 0.5s infinite ease-in-out alternate;
+}
+
+.theme-menu__button:hover {
+  animation: opacity 0.3s ease forwards;
+}

@@ -24,7 +24,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: var(--font-inter), "sans-serif";
+  font-family: var(--main-font), "sans-serif";
   font-variation-settings: "wght" var(--font-weight-normal);
   align-items: center;
 }
@@ -34,19 +34,15 @@
   gap: 46px;
 }
 
-.page_text_weight_main {
+.section_title {
   font-size: 18px;
-}
-
-.zero-sprint-section {
   padding-top: 7px;
   padding-left: 11px;
-  height: 31px;
   width: 100%;
   font-variation-settings: "wght" var(--font-weight-bold);
 }
 
-.card-width {
+.section-width {
   width: 48.5vw;
 }
 
@@ -56,15 +52,14 @@
   margin-top: 100px;
   margin-bottom: 100px;
   background-color: var(--background-color);
-  min-height: 368px;
   min-width: 375px;
   border: 2px solid var(--border-color);
   justify-items: center;
-  font-family: var(--font-start), "sans-serif";
+  font-family: var(--font-accent), "fantasy";
   align-content: space-evenly;
 }
 
-.header-nav-html {
+.header-link-html {
   margin-top: 110px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-style: normal;
@@ -75,7 +70,7 @@
 
 .page-subheader {
   font:
-    23px var(--font-start),
+    23px var(--font-accent),
     "sans-serif";
   text-transform: uppercase;
 }
@@ -83,7 +78,7 @@
 .theme-menu__list {
   margin-left: 20px;
   font:
-    14px var(--font-start),
+    14px var(--font-accent),
     "sans-serif";
   display: grid;
   gap: 11px;
@@ -91,7 +86,7 @@
 }
 
 .section_about_progress {
-  margin-bottom: 10px;
+  margin-block-end: 10px;
   min-width: 375px;
   justify-items: end;
   background-color: var(--background-color);
@@ -102,13 +97,14 @@
 
 .page-little-label {
   font:
-    14px var(--font-start),
+    14px var(--font-accent),
     "sans-serif";
   position: absolute;
   mix-blend-mode: hard-light;
   opacity: 0.5;
   top: 18px;
   right: 25px;
+  text-shadow: 0 0 1px var(--background-color);
 }
 
 @supports (
@@ -116,103 +112,41 @@
     (-webkit-text-stroke: 1px var(--background-color))
 ) {
   .page-little-label {
+    text-shadow: none;
     -webkit-text-stroke-color: var(--background-color);
     -webkit-text-stroke-width: 1px;
   }
 }
 
 .matrix {
+  border: 2px solid var(--border-color);
   width: 100%;
   max-width: 100%;
-  height: 696px;
   mix-blend-mode: var(--animation-matrix-mix);
   filter: var(--animation-matrix-filter);
 }
 
 .look_out_the_window {
-  width: 100%;
-  max-width: 100%;
-  height: 696px;
   filter: var(--look-gif-mix);
 }
 
 .defo-gif {
-  width: 100%;
-  max-width: 100%;
-  height: 696px;
   filter: var(--defo-gif-filter);
 }
 
 .karman-bro {
-  width: 100%;
-  max-width: 100%;
-  height: 696px;
+  border: 2px solid var(--border-color);
 }
 
 .tegridy {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  height: 696px;
   filter: brightness(0.5);
 }
 
-.tegridy_hover::before {
-  cursor: pointer;
-  position: absolute;
-  content: "18+ content";
-  color: black;
-  font-size: clamp(2.5rem, -0.581rem + 13.1455vw, 11.25rem);
-  transform: translateX(0%);
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 10;
-  transition: 0.5s ease-in-out;
-  background-color: var(--linear-gradient-from);
-}
-
-.tegridy_hover::after {
-  cursor: pointer;
-  position: absolute;
-  content: "seriously, it's not for kids";
-  color: black;
-  font-size: clamp(2.5rem, -0.581rem + 13.1455vw, 11.25rem);
-  transform: translateX(0%);
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 9;
-  top: 1px;
-  transition: 0.5s ease-in-out;
-  background-color: var(--linear-gradient-from);
-}
-
-.tegridy_hover:active::after {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-
-.tegridy_hover:hover::before {
-  transform: translateX(100%);
-  opacity: 0;
-}
-
 .Matthew_McConaughey {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  height: 696px;
   filter: brightness(0.7);
 }
 
 .simspon {
-  width: 100%;
-  max-width: 100%;
-  height: 696px;
-  position: relative;
   filter: brightness(0.8);
   mix-blend-mode: var(--simpson-mix);
 }
@@ -222,7 +156,8 @@
   position: relative;
 }
 
-.text-about-start {
+.page_main_text {
+  font-size: 18px;
   padding: 27px 25px 0px 25px;
 }
 
@@ -238,26 +173,21 @@
   padding: 43px 26px 22px;
 }
 
-.car {
-  width: 100%;
-  object-fit: cover;
-}
-
 .card__like-button {
   cursor: pointer;
   color: var(--diffence-color-like);
   border: 2px solid var(--diffence-color-like);
   font:
-    14px var(--font-start),
+    14px var(--font-accent),
     "sans-serif";
   background-color: transparent;
-  min-height: 38px;
   min-width: 130px;
   position: relative;
   mix-blend-mode: difference;
 }
 
 .text-about-memories {
+  font-size: 18px;
   padding: 10px 6px 0px 25px;
 }
 
@@ -284,30 +214,6 @@
   left: -14px;
 }
 
-.theme-menu__button::before {
-  animation: moving 0.5s infinite ease-in-out alternate;
-}
-@keyframes moving {
-  from {
-    translate: 0 0;
-  }
-  to {
-    translate: 4px 0px;
-  }
-}
-
-.theme-menu__button:hover {
-  animation: opacity 0.3s ease forwards;
-}
-@keyframes opacity {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-
 .theme-menu__button::after {
   position: absolute;
   content: "";
@@ -325,12 +231,13 @@
 }
 
 .theme-menu__button:focus-visible::after {
+  pointer-events: none;
+  opacity: 0.3;
   width: 100%;
 }
 
 .card__like-button:focus {
   text-decoration: none;
-  outline: 0;
 }
 
 .card__like-button:focus-visible {
@@ -424,26 +331,10 @@
   transition: 0.3s linear;
   transition-delay: 0.03s;
 }
-@keyframes scale {
-  from {
-    scale: 1;
-  }
-  to {
-    scale: 1.5;
-  }
-}
 
 .like-icon.is-liked .sparks {
   animation: opacity 0.3s ease-in;
   animation-delay: 0.3s;
-}
-@keyframes opacity-sraks {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .footer_page_content {
@@ -470,7 +361,7 @@
   color: var(--diffence-color-like);
   border: 2px solid var(--diffence-color-like);
   font:
-    14px var(--font-start),
+    14px var(--font-accent),
     "sans-serif";
   background-color: transparent;
   min-height: 38px;
@@ -487,10 +378,7 @@
 }
 
 .footer_button_floppy:focus-visible {
-  text-decoration: none;
-  outline: 0;
   box-shadow: 2px 2px 0px 0px var(--diffence-color-like);
-  transition: 0.3s;
 }
 
 .footer_page_button::before {
@@ -515,14 +403,12 @@ dialog[open] {
   color: var(--text-color);
   outline: 2px solid;
   font:
-    14px var(--font-start),
+    14px var(--font-accent),
     "sans-serif";
   display: flex;
   border-width: 0;
   max-inline-size: 357px;
   inline-size: 98%;
-  min-height: 193px;
-  position: fixed;
   inset: 0;
 }
 
@@ -564,6 +450,7 @@ dialog:not([open]) {
   border: 2px solid var(--diffence-color-like);
   background-color: transparent;
   mix-blend-mode: difference;
+  text-transform: uppercase;
 }
 
 .floppy_big {
@@ -580,10 +467,7 @@ dialog:not([open]) {
 }
 
 .dialog-button:focus-visible {
-  text-decoration: none;
-  outline: 0;
   box-shadow: 2px 2px 0px 0px var(--diffence-color-like);
-  transition: 0.3s;
 }
 
 .dialog-button::before {
@@ -608,6 +492,5 @@ dialog:not([open]) {
 
 @media (width <= 375px) {
   .media_image_position {
-    height: 371px;
   }
 }
