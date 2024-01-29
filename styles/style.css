@@ -122,6 +122,14 @@
   border: 2px solid var(--border-color);
   width: 100%;
   max-width: 100%;
+}
+
+.matrix_filter {
+  mix-blend-mode: var(--animation-matrix-mix);
+  filter: var(--animation-matrix-filter);
+}
+
+.filter_rabbit {
   mix-blend-mode: var(--animation-matrix-mix);
   filter: var(--animation-matrix-filter);
 }
