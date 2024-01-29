@@ -2,20 +2,12 @@
 :root {
   --main-font: "inter-Variable";
   --font-accent: "PressStart2P-Regular";
-  --text-color: #000;
-  --border-color: #000;
+  --super-color: #000;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --background-color: #fff;
-  --heart-sparks-color: red;
   --heart-main-color: red;
   --core-color: #fff;
-  --like-text-button: black;
-  --heart-contour: #000;
-  --like-hover-color: black;
-  --like-main-color: black;
-  --main-color: white;
-  --heart-contour-liked: red;
   --diffence-color-like: #fff;
   --background-image-color: #d3d3d3;
   --linear-gradient-from: #e7e7e7;
