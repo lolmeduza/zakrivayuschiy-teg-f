@@ -638,7 +638,12 @@
         <svg class="floppy_big">
           <use href="svg/floppy.svg#floppy" class="floppy"></use>
         </svg>
-        <button id="dialog-button" type="button" class="dialog-button">
+        <button
+          id="dialog-button"
+          type="button"
+          class="dialog-button"
+          onclick="window['dialog-id'].close();"
+        >
           ок
         </button>
       </form>
