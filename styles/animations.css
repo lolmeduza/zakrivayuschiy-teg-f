@@ -68,11 +68,13 @@
   --main-color: var(--heart-main-color);
   --page-main-color: var(--heart-main-color);
   animation: scale 0.3s ease-in;
+  --super-color: var(--heart-main-color);
   animation-delay: 0.1s;
 }
 
 .like-icon.is-liked .contour {
   transition: 0.3s linear;
+
   transition-delay: 0.03s;
 }
 
